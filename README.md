@@ -1,6 +1,6 @@
-# alnat.app
+# astrallabs.eu
 
-Сайт студии Alnat: страницы приложений и политики конфиденциальности.
+Сайт студии Astral Labs: страницы приложений и политики конфиденциальности.
 Статика на GitHub Pages, без сборки — правишь HTML, пушишь, сайт обновился.
 
 Репозиторий **публичный** намеренно: Pages на бесплатном тарифе иначе не
@@ -24,10 +24,10 @@ app-ads.txt.template  НЕ переименовывать, пока нет ре�
 
 | Куда | Что |
 |---|---|
-| Lexio → Privacy policy | `https://alnat.app/lexio/privacy/` |
-| Bazi Compass → Privacy policy | `https://alnat.app/bazi/privacy/` |
-| Карточка → Support / Website | `https://alnat.app/support/` |
-| Аккаунт разработчика → Веб-сайт | `https://alnat.app` |
+| Lexio → Privacy policy | `https://astrallabs.eu/lexio/privacy/` |
+| Bazi Compass → Privacy policy | `https://astrallabs.eu/bazi/privacy/` |
+| Карточка → Support / Website | `https://astrallabs.eu/support/` |
+| Аккаунт разработчика → Веб-сайт | `https://astrallabs.eu` |
 
 ## Как обновлять
 
