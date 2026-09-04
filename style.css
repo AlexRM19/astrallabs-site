@@ -90,3 +90,12 @@ footer.legal {
 footer.legal a { color: var(--muted); }
 
 .updated { font-size: .875rem; color: var(--faint); margin-top: -1rem; margin-bottom: 2rem; }
+
+/* Услуги на главной: три карточки в ряд, на телефоне в столбик. */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 1rem; margin: 1rem 0; }
+.service {
+  padding: 1.25rem 1.5rem;
+  background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+}
+.service h3 { margin: 0 0 .5rem; font-size: 1.1rem; }
+.service p { margin: 0; color: var(--muted); font-size: .95rem; }
