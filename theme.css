@@ -1,0 +1,173 @@
+/* Astral Labs — тема из Claude Design (проект «Astral Labs», Home).
+   Тёмно-синяя основа, Newsreader для заголовков, IBM Plex Sans для текста,
+   IBM Plex Mono для подписей. Страницы переезжают на неё по одной;
+   те, что ещё на style.css, эту таблицу не подключают. */
+
+:root {
+  --bg: #0A1020;
+  --bg-raised: #0E1728;
+  --bg-hover: #111C31;
+  --ink: #E8ECF4;
+  --ink-soft: #D5DCE8;
+  --muted: #B4BECE;
+  --muted-2: #9FAABC;
+  --label: #8C99AE;
+  --faint: #75819A;
+  --line: rgba(232,236,244,0.12);
+  --line-soft: rgba(232,236,244,0.08);
+  --accent: #C8F26B;
+  --accent-hover: #DCFF8F;
+  --serif: Newsreader, Georgia, "Times New Roman", serif;
+  --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: var(--bg); }
+body {
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.6;
+  padding: 0 40px;
+  -webkit-text-size-adjust: 100%;
+}
+a { color: var(--ink); }
+a:hover { color: var(--accent); }
+::selection { background: var(--accent); color: var(--bg); }
+
+.wrap { max-width: 1120px; margin: 0 auto; }
+
+/* Моноширинная подпись раздела. */
+.label {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--label);
+}
+
+/* Шапка. */
+header.top {
+  display: flex; align-items: center; justify-content: space-between; gap: 32px;
+  padding: 24px 0; border-bottom: 1px solid var(--line);
+}
+header.top .brand {
+  display: flex; align-items: center; gap: 11px;
+  font-family: var(--serif); font-size: 22px; letter-spacing: -0.01em;
+  text-decoration: none; color: var(--ink);
+}
+header.top .brand svg { width: 26px; height: 26px; flex: none; }
+header.top nav {
+  display: flex; gap: 28px; flex-wrap: wrap;
+  font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
+}
+header.top nav a { text-decoration: none; color: var(--label); }
+header.top nav a:hover { color: var(--accent); }
+
+/* Первый экран. */
+.hero { padding: 112px 0 96px; display: grid; gap: 48px; }
+.eyebrow {
+  display: flex; align-items: center; gap: 14px;
+  font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--label);
+}
+.eyebrow::before { content: ""; width: 7px; height: 7px; background: var(--accent); border-radius: 50%; display: block; }
+.hero h1 {
+  margin: 0; font-family: var(--serif); font-weight: 400;
+  font-size: clamp(46px, 7.2vw, 104px); line-height: 0.98; letter-spacing: -0.025em;
+  max-width: 16ch; text-wrap: balance;
+}
+.hero .lead, .intro { margin: 0; max-width: 56ch; font-size: 19px; line-height: 1.6; color: var(--muted); text-wrap: pretty; }
+.actions { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+.btn {
+  font-family: var(--mono); font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase;
+  padding: 14px 22px; text-decoration: none;
+}
+.btn.primary { background: var(--accent); color: var(--bg); }
+.btn.primary:hover { background: var(--accent-hover); color: var(--bg); }
+.btn.ghost { color: var(--ink); border: 1px solid rgba(232,236,244,0.22); }
+.btn.ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+/* Разделы. */
+section.block { padding: 72px 0; border-top: 1px solid var(--line); }
+section.block .label { margin-bottom: 56px; }
+section.split {
+  display: grid; grid-template-columns: minmax(200px, 1fr) minmax(0, 2.4fr); gap: 48px;
+}
+section.split .label { margin-bottom: 0; }
+
+/* Услуги: колонки, разделённые тонкой линией. */
+.services {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1px; background: var(--line);
+}
+.services > section { background: var(--bg); padding: 0 32px 8px; }
+.services > section:first-child { padding-left: 0; }
+.services > section:last-child { padding-right: 0; }
+.num { font-family: var(--mono); font-size: 12px; color: var(--accent); letter-spacing: 0.1em; margin-bottom: 20px; }
+.services h3 { margin: 0 0 16px; font-family: var(--serif); font-weight: 400; font-size: 32px; letter-spacing: -0.01em; }
+.services p { margin: 0; font-size: 15.5px; line-height: 1.65; color: var(--muted-2); text-wrap: pretty; }
+
+/* Принципы: нумерованный список. */
+.principles { margin: 0; padding: 0; list-style: none; display: grid; gap: 24px; max-width: 64ch; }
+.principles li {
+  display: grid; grid-template-columns: 32px 1fr; gap: 8px;
+  font-size: 17px; line-height: 1.6; color: var(--ink-soft); text-wrap: pretty;
+  border-bottom: 1px solid var(--line-soft); padding-bottom: 24px;
+}
+.principles li:last-child { border-bottom: 0; padding-bottom: 0; }
+.principles .num { margin: 0; padding-top: 6px; }
+
+/* Продукты. */
+.products { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+.app-card {
+  display: flex; flex-direction: column; gap: 16px;
+  text-decoration: none; color: var(--ink);
+  background: var(--bg-raised); border: 1px solid var(--line); padding: 36px;
+}
+.app-card:hover { border-color: var(--accent); background: var(--bg-hover); color: var(--ink); }
+.app-card h3 { margin: 0; font-family: var(--serif); font-weight: 400; font-size: 36px; letter-spacing: -0.015em; }
+.app-card p { margin: 0; font-size: 16px; line-height: 1.65; color: var(--muted-2); text-wrap: pretty; flex: 1; }
+.app-card .tag {
+  font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--accent); border: 1px solid rgba(200,242,107,0.35); padding: 6px 10px; align-self: flex-start;
+}
+
+/* Контакт. */
+section.contact { padding: 96px 0; }
+.contact-body { display: grid; gap: 32px; }
+.contact-body .pitch {
+  margin: 0; max-width: 54ch; font-family: var(--serif);
+  font-size: clamp(24px, 2.6vw, 34px); line-height: 1.35; letter-spacing: -0.01em; color: var(--ink); text-wrap: pretty;
+}
+.contact-body .email {
+  font-family: var(--mono); font-size: clamp(18px, 2.2vw, 26px); color: var(--accent);
+  text-decoration: none; border-bottom: 1px solid rgba(200,242,107,0.4);
+}
+.contact-body .email:hover { border-bottom-color: var(--accent); }
+.contact-body .aside { margin: 0; max-width: 54ch; font-size: 16px; line-height: 1.65; color: var(--muted-2); text-wrap: pretty; }
+
+/* Подвал с реквизитами. */
+footer.legal {
+  padding: 36px 0 56px; border-top: 1px solid var(--line);
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px;
+  font-family: var(--mono); font-size: 12.5px; line-height: 1.8; color: var(--faint);
+}
+footer.legal strong { color: var(--muted); font-weight: 500; }
+footer.legal a { color: var(--faint); text-decoration: none; border-bottom: 1px solid rgba(117,129,154,0.4); }
+footer.legal a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* Узкие экраны. */
+@media (max-width: 720px) {
+  body { padding: 0 20px; }
+  header.top { flex-direction: column; align-items: flex-start; gap: 16px; }
+  header.top nav { gap: 18px; }
+  .hero { padding: 64px 0 56px; gap: 32px; }
+  section.block { padding: 48px 0; }
+  section.block .label { margin-bottom: 32px; }
+  section.split { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .services > section { padding: 24px 0 8px; }
+  section.contact { padding: 64px 0; }
+}

@@ -5,13 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Astral Labs — mobile, web and embedded software studio</title>
 <meta name="description" content="Astral Labs is a software studio in Wrocław, Poland. We build mobile apps, web services and embedded software — for clients and as our own products.">
-<link rel="stylesheet" href="/style.css">
+<meta name="theme-color" content="#0A1020">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/theme.css">
 </head>
 <body>
 <div class="wrap">
 
   <header class="top">
-    <a class="brand" href="/">Astral Labs</a>
+    <a class="brand" href="/">
+      <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M4 42 L19 6 L34 42 H44" stroke="#E8ECF4" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="19" cy="31" r="3.6" fill="#C8F26B"/></svg>
+      <span>Astral Labs</span>
+    </a>
     <nav>
       <a href="#services">Services</a>
       <a href="#products">Products</a>
@@ -20,95 +28,123 @@
     </nav>
   </header>
 
-  <h1>Software that ships and keeps working</h1>
-  <p class="lead">
-    Astral Labs is a software studio in Wrocław, Poland. We design and build
-    mobile apps, web services and embedded software — for clients who need a
-    product delivered, and as products of our own.
-  </p>
-
-  <h2 id="services">What we do</h2>
-
-  <div class="grid">
-    <section class="service">
-      <h3>Mobile apps</h3>
-      <p>
-        Android and iOS apps, in Flutter or native code, taken from an idea to a
-        published release. We handle the parts that usually slow a launch down:
-        offline-first data, store compliance, privacy policies and Data Safety
-        forms, staged rollouts and updates after release.
-      </p>
-    </section>
-
-    <section class="service">
-      <h3>Web</h3>
-      <p>
-        Landing pages, web applications, admin dashboards and the APIs behind
-        them. From a fast static site with a custom domain and HTTPS to a
-        full-stack product with authentication, payments and a database — sized
-        to what the project actually needs.
-      </p>
-    </section>
-
-    <section class="service">
-      <h3>Embedded &amp; IoT</h3>
-      <p>
-        Firmware for microcontrollers and Linux-based devices, connectivity over
-        BLE, Wi-Fi and MQTT, companion mobile apps and cloud integration. We
-        are comfortable across the whole chain, from a sensor reading on the
-        board to a chart on a phone screen.
-      </p>
-    </section>
-  </div>
-
-  <h2>How we work</h2>
-  <ul>
-    <li>You talk directly to the engineers doing the work, not to an account manager.</li>
-    <li>A short discovery first: we agree on scope, milestones and what “done” means before anyone writes code.</li>
-    <li>Fixed-price for well-defined scope, time and materials for evolving products; either way, weekly progress you can see and run.</li>
-    <li>Code, documentation and infrastructure access are yours from day one. No lock-in.</li>
-    <li>Privacy by default: we collect only the data a product needs and say so plainly in its policy.</li>
-  </ul>
-
-  <h2 id="products">Our products</h2>
-  <p>
-    We use the same approach on apps we publish ourselves. They are the best
-    demonstration of how we build.
-  </p>
-
-  <a class="app-card" href="/lexio/">
-    <h3>Lexio</h3>
-    <p>
-      Learn English from the content you actually read. Words you meet in a text
-      go into a deck, come back on a spaced-repetition schedule, and return in
-      listening and conversation practice. Works offline.
+  <section class="hero">
+    <p class="eyebrow">Software studio · Wrocław, Poland</p>
+    <h1>Software that ships and keeps working</h1>
+    <p class="lead">
+      Astral Labs is a software studio in Wrocław, Poland. We design and build
+      mobile apps, web services and embedded software — for clients who need a
+      product delivered, and as products of our own.
     </p>
-    <span class="tag">Android · in testing</span>
-  </a>
+    <div class="actions">
+      <a class="btn primary" href="#contact">Start a project</a>
+      <a class="btn ghost" href="#products">See our apps</a>
+    </div>
+  </section>
 
-  <a class="app-card" href="/bazi/">
-    <h3>Bazi Compass</h3>
-    <p>
-      Calculates a BaZi (Four Pillars) chart from a birth date and explains it in
-      plain language. The chart itself is free; AI interpretation is optional.
+  <section class="block" id="services">
+    <h2 class="label">What we do</h2>
+    <div class="services">
+      <section>
+        <div class="num">01</div>
+        <h3>Mobile apps</h3>
+        <p>
+          Android and iOS apps, in Flutter or native code, taken from an idea to a
+          published release. We handle the parts that usually slow a launch down:
+          offline-first data, store compliance, privacy policies and Data Safety
+          forms, staged rollouts and updates after release.
+        </p>
+      </section>
+      <section>
+        <div class="num">02</div>
+        <h3>Web</h3>
+        <p>
+          Landing pages, web applications, admin dashboards and the APIs behind
+          them. From a fast static site with a custom domain and HTTPS to a
+          full-stack product with authentication, payments and a database — sized
+          to what the project actually needs.
+        </p>
+      </section>
+      <section>
+        <div class="num">03</div>
+        <h3>Embedded &amp; IoT</h3>
+        <p>
+          Firmware for microcontrollers and Linux-based devices, connectivity over
+          BLE, Wi-Fi and MQTT, companion mobile apps and cloud integration. We
+          are comfortable across the whole chain, from a sensor reading on the
+          board to a chart on a phone screen.
+        </p>
+      </section>
+    </div>
+  </section>
+
+  <section class="block split">
+    <h2 class="label">How we work</h2>
+    <ul class="principles">
+      <li><span class="num">01</span><span>You talk directly to the engineers doing the work, not to an account manager.</span></li>
+      <li><span class="num">02</span><span>A short discovery first: we agree on scope, milestones and what “done” means before anyone writes code.</span></li>
+      <li><span class="num">03</span><span>Fixed-price for well-defined scope, time and materials for evolving products; either way, weekly progress you can see and run.</span></li>
+      <li><span class="num">04</span><span>Code, documentation and infrastructure access are yours from day one. No lock-in.</span></li>
+      <li><span class="num">05</span><span>Privacy by default: we collect only the data a product needs and say so plainly in its policy.</span></li>
+    </ul>
+  </section>
+
+  <section class="block" id="products">
+    <h2 class="label" style="margin-bottom:24px">Our products</h2>
+    <p class="intro" style="margin-bottom:48px;max-width:52ch">
+      We use the same approach on apps we publish ourselves. They are the best
+      demonstration of how we build.
     </p>
-    <span class="tag">Android · in development</span>
-  </a>
+    <div class="products">
+      <a class="app-card" href="/lexio/">
+        <h3>Lexio</h3>
+        <p>
+          Learn English from the content you actually read. Words you meet in a text
+          go into a deck, come back on a spaced-repetition schedule, and return in
+          listening and conversation practice. Works offline.
+        </p>
+        <span class="tag">Android · in testing</span>
+      </a>
+      <a class="app-card" href="/bazi/">
+        <h3>Bazi Compass</h3>
+        <p>
+          Calculates a BaZi (Four Pillars) chart from a birth date and explains it in
+          plain language. The chart itself is free; AI interpretation is optional.
+        </p>
+        <span class="tag">Android · in development</span>
+      </a>
+    </div>
+  </section>
 
-  <h2 id="contact">Contact</h2>
-  <p>
-    Tell us what you are building and where it stands — a paragraph is enough
-    to start. Write to <a href="mailto:hello@astrallabs.eu">hello@astrallabs.eu</a>;
-    we reply within two business days, in English, Polish or Russian.
-    The same address handles support for our apps.
-  </p>
+  <section class="block split contact" id="contact">
+    <h2 class="label">Contact</h2>
+    <div class="contact-body">
+      <p class="pitch">Tell us what you are building and where it stands — a paragraph is enough to start.</p>
+      <div><a class="email" href="mailto:hello@astrallabs.eu">hello@astrallabs.eu</a></div>
+      <p class="aside">
+        We reply within two business days, in English, Polish or Russian.
+        The same address handles support for our apps.
+      </p>
+    </div>
+  </section>
 
   <footer class="legal">
-    <strong>Aliaksandr Ramaniuk</strong> (sole proprietorship registered in Poland)<br>
-    Marsz. Józefa Piłsudskiego 74/320, 50-020 Wrocław, Poland<br>
-    NIP: 8943218739 · Phone: +48 790 281 740 · <a href="mailto:hello@astrallabs.eu">hello@astrallabs.eu</a><br>
-    <br>
-    Privacy policies: <a href="/lexio/privacy/">Lexio</a> · <a href="/bazi/privacy/">Bazi Compass</a>
+    <div>
+      <strong>Aliaksandr Ramaniuk</strong><br>
+      sole proprietorship registered in Poland<br>
+      Marsz. Józefa Piłsudskiego 74/320<br>
+      50-020 Wrocław, Poland
+    </div>
+    <div>
+      NIP: 8943218739<br>
+      Phone: +48 790 281 740<br>
+      <a href="mailto:hello@astrallabs.eu">hello@astrallabs.eu</a>
+    </div>
+    <div>
+      Privacy policies<br>
+      <a href="/lexio/privacy/">Lexio</a> ·
+      <a href="/bazi/privacy/">Bazi Compass</a>
+    </div>
   </footer>
 
 </div>
