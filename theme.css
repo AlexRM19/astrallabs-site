@@ -171,3 +171,79 @@ footer.legal a:hover { color: var(--accent); border-bottom-color: var(--accent);
   .services > section { padding: 24px 0 8px; }
   section.contact { padding: 64px 0; }
 }
+
+/* ---- Внутренние страницы: продукт, поддержка, политики ---- */
+:root { --text: #C3CBD9; }
+header.top nav a.active { color: var(--accent); }
+
+/* Заголовок страницы. */
+.page-hero { padding: 96px 0 72px; border-bottom: 1px solid var(--line); display: grid; gap: 32px; }
+.page-hero h1 {
+  margin: 0; font-family: var(--serif); font-weight: 400;
+  font-size: clamp(52px, 7.5vw, 104px); line-height: 0.95; letter-spacing: -0.03em; text-wrap: balance;
+}
+.page-hero h1.xl { font-size: clamp(56px, 8vw, 112px); }
+.page-hero .tagline {
+  margin: 0; max-width: 56ch; font-family: var(--serif);
+  font-size: clamp(22px, 2.4vw, 30px); line-height: 1.35; letter-spacing: -0.01em; color: var(--ink-soft); text-wrap: pretty;
+}
+.page-hero.doc-hero { padding: 80px 0 64px; gap: 28px; }
+.page-hero.doc-hero h1 { font-size: clamp(40px, 5.5vw, 72px); line-height: 1.02; letter-spacing: -0.025em; }
+.meta { font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--label); }
+
+/* Ссылка в тексте: лаймовая с тонким подчёркиванием. */
+.doc a, .page-hero a, .callout a { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(200,242,107,0.4); }
+.doc a:hover, .page-hero a:hover, .callout a:hover { border-bottom-color: var(--accent); }
+
+/* Врезка с главным утверждением. */
+.callout {
+  max-width: 66ch; border: 1px solid rgba(200,242,107,0.35); background: var(--bg-raised);
+  padding: 28px 32px; font-size: 17px; line-height: 1.65; color: var(--text); text-wrap: pretty;
+}
+.callout strong, .doc strong { color: var(--ink); font-weight: 500; }
+
+/* Статья: подпись слева, содержание справа. */
+article.doc {
+  display: grid; grid-template-columns: minmax(180px, 1fr) minmax(0, 2.6fr);
+  column-gap: 48px; row-gap: 64px; padding: 72px 0;
+}
+article.doc.tight { row-gap: 56px; padding: 64px 0; }
+article.doc > .label { padding-top: 6px; }
+.doc p { margin: 0; max-width: 66ch; font-size: 17px; line-height: 1.7; color: var(--text); text-wrap: pretty; }
+.doc .stack { display: grid; gap: 20px; max-width: 66ch; }
+.doc .stack.loose { gap: 28px; }
+.doc .stack.wide { gap: 36px; }
+.doc .stack .callout { max-width: none; }
+.doc h3 { margin: 0; font-family: var(--serif); font-weight: 400; font-size: 26px; letter-spacing: -0.01em; color: var(--ink); }
+.doc .sub { display: grid; gap: 12px; }
+.doc .principles li { color: var(--text); }
+.doc .principles.compact { gap: 20px; }
+.doc .principles.compact li { padding-bottom: 20px; }
+.doc .principles.dense { gap: 18px; }
+.doc .principles.dense li { padding-bottom: 18px; }
+.doc .principles.plain li { display: block; }
+.bullets { margin: 0; padding-left: 20px; display: grid; gap: 8px; font-size: 17px; line-height: 1.6; color: var(--text); }
+.bullets li { margin: 0; }
+
+/* Таблица. */
+.doc table { border-collapse: collapse; width: 100%; font-size: 15.5px; line-height: 1.55; color: var(--text); }
+.doc th {
+  text-align: left; font-family: var(--mono); font-size: 11.5px; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--label);
+  padding: 0 16px 12px 0; border-bottom: 1px solid rgba(232,236,244,0.2); vertical-align: bottom;
+}
+.doc th:last-child { padding-right: 0; }
+.doc td { padding: 14px 16px 14px 0; border-bottom: 1px solid var(--line-soft); vertical-align: top; }
+.doc td:last-child { padding-right: 0; }
+.doc td.key { width: 45%; }
+.doc td.key.half { width: 50%; }
+
+@media (max-width: 720px) {
+  .page-hero { padding: 56px 0 40px; gap: 20px; }
+  .page-hero.doc-hero { padding: 48px 0 36px; }
+  article.doc, article.doc.tight { grid-template-columns: minmax(0, 1fr); row-gap: 16px; padding: 40px 0; }
+  article.doc > .label { margin-top: 32px; padding-top: 0; }
+  article.doc > .label:first-child { margin-top: 0; }
+  .spacer { display: none; }
+  .callout { padding: 20px 22px; }
+}

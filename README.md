@@ -14,8 +14,7 @@ index.html            студия — он же «официальный сай
 lexio/                Lexio + политика
 bazi/                 Bazi Compass + политика
 support/              поддержка (обязательна для карточки в Play)
-style.css             стили внутренних страниц (светлая тема, до переезда на theme.css)
-theme.css             тема из Claude Design: тёмно-синяя, Newsreader + IBM Plex; главная уже на ней
+theme.css             единая тема из Claude Design: тёмно-синяя, Newsreader + IBM Plex
 favicon.svg           монограмма из логотипа
 CNAME                 домен для Pages
 .nojekyll             отключает Jekyll: он нам не нужен и только мешает
