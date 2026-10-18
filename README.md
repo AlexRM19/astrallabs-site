@@ -12,7 +12,7 @@
 ```
 index.html            студия — он же «официальный сайт организации» для Google
 lexio/                Lexio + политика
-bazi/                 Bazi Compass + политика
+bazi/                 Kiun + политика
 support/              поддержка (обязательна для карточки в Play)
 theme.css             единая тема из Claude Design: тёмно-синяя, Newsreader + IBM Plex
 favicon.svg           монограмма из логотипа
@@ -26,7 +26,7 @@ app-ads.txt.template  НЕ переименовывать, пока нет ре�
 | Куда | Что |
 |---|---|
 | Lexio → Privacy policy | `https://astrallabs.eu/lexio/privacy/` |
-| Bazi Compass → Privacy policy | `https://astrallabs.eu/bazi/privacy/` |
+| Kiun → Privacy policy | `https://astrallabs.eu/bazi/privacy/` |
 | Карточка → Support / Website | `https://astrallabs.eu/support/` |
 | Аккаунт разработчика → Веб-сайт | `https://astrallabs.eu` |
 
@@ -41,7 +41,7 @@ app-ads.txt.template  НЕ переименовывать, пока нет ре�
 ## Что тут намеренно не так, как кажется
 
 **Две политики, а не одна общая.** У приложений противоположные модели данных:
-Lexio не собирает ничего и не имеет сервера, Bazi Compass хранит дату и место
+Lexio не собирает ничего и не имеет сервера, Kiun хранит дату и место
 рождения, переписку с ИИ и покупки. Общая политика была бы неверна для обоих —
 для Lexio она преувеличивала бы сбор, для Bazi преуменьшала.
 
